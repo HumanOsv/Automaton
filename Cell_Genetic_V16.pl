@@ -1,7 +1,5 @@
 #!/usr/bin/perl
 
-# noh protein same residue as within 4 of resname LIG
-
 #
 # Write code: 
 #            Diego Inostrosa & Osvaldo Yañez Osses
