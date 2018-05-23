@@ -1,0 +1,26 @@
+# # Numero de geometrias 
+# Numero de geometrias (3N o 5N, N = numero de atomos)
+numb_conf = 20
+
+# # Operador Genetico
+mutations = YES
+crossing_over = YES
+
+# Tamaño de la caja 
+box_size = 
+
+# Atomos ( example: H 02 Pb 03 Ca 04 )
+chemical_formula = C 08
+
+# software mopac and gaussian (mopac/gaussian/lammps)
+software = lammps
+
+# # configuracion archivo para optimizacion a nivel cuantico 
+# N° de procesadores y Memoria RAM 
+core_mem = 4,8
+# Carga y Multiplicidad
+charge_multi = 0,1
+# keywords for mopac, gaussian or lammps
+#header = PBE1PBE/SDDAll scf=(maxcycle=512) opt=(cartesian,maxcycle=512)
+#header = AUX LARGE PM6
+header = reaxxFF.Carbon
