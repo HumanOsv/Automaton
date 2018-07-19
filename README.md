@@ -71,7 +71,9 @@ The size of the box (in Angstroms) length, width, and height. AUTOMATON build an
 
 Different atomic (or chemical) species in the system.( example: H 02 Pb 03 Ca 04 )
 
-    chemical_formula = Co 13
+    chemical_formula = B 06 Mg 06
+    
+*NOTE: Respect the spaces of separation.*
 
 Software mopac and gaussian (mopac/gaussian/lammps)
 
@@ -81,7 +83,7 @@ Software mopac and gaussian (mopac/gaussian/lammps)
 
 The number of processors to use in the run (the value may be used to create the input file) # and memory to be used in GB.
 
-    core_mem = 4,8
+    core_mem = 8,8
 
 The charge and multiplicity of the candidate.
 
@@ -101,3 +103,8 @@ keywords for gaussian, mopac, or lamps
 
     header = reaxxFF.Co
 
+General Note: Respect the spaces of separation between the symbol "=".
+
+    Correct  : software = gaussian
+    Incorrect: software=gaussian
+	
