@@ -89,7 +89,7 @@ The charge and multiplicity of the candidate.
 
     charge_multi = 0,1
 
-keywords for gaussian, mopac, or lamps
+keywords for gaussian, mopac, or lammps
 
 *Gaussian*
 
