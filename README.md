@@ -10,13 +10,13 @@ AUTOMATON is written in Perl. The program has only been tested on Mac OS X, Linu
 
 This topic lists library and software that must be installed prior to installing AUTOMATON.
 
--	Install CPAN modules (http://www.cpan.org/modules/INSTALL.html)
+-Install CPAN modules (http://www.cpan.org/modules/INSTALL.html)
 
-            user$ sudo cpan Parallel::ForkManager
+    user$ sudo cpan Parallel::ForkManager
       
-            user$ sudo cpan Math::Matrix
+    user$ sudo cpan Math::Matrix
 
--	Install External softwares
+-Install External softwares
 
   •	Mopac (http://openmopac.net/Download_MOPAC_Executable_Step2.html)
 
