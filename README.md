@@ -57,7 +57,7 @@ prediction.
 
 Number of structures (3N or 5N, N = Atoms number)
 
-    numb_conf = 10
+    numb_conf = 60
 
 Genetic operations Most genetic algorithms implement several genetic operators; mating
 and mutation operator.
@@ -71,7 +71,7 @@ The size of the box (in Angstroms) length, width, and height. AUTOMATON build an
 
 Different atomic (or chemical) species in the system.( example: H 02 Pb 03 Ca 04 )
 
-    chemical_formula = B 06 Mg 06
+    chemical_formula = H 06 C 06
     
 *NOTE: Respect the spaces of separation.*
 
