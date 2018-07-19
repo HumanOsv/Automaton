@@ -12,9 +12,9 @@ This topic lists library and software that must be installed prior to installing
 
 -	Install CPAN modules (http://www.cpan.org/modules/INSTALL.html)
 
-      user$ sudo cpan Parallel::ForkManager
-    
-      user$ sudo cpan Math::Matrix
+            user$ sudo cpan Parallel::ForkManager
+      
+            user$ sudo cpan Math::Matrix
 
 -	Install External softwares
 
