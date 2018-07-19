@@ -105,6 +105,10 @@ keywords for gaussian, mopac, or lamps
 
 General Note: Respect the spaces of separation between the symbol "=".
 
-    Correct  : software = gaussian
-    Incorrect: software=gaussian
+    Correct : software = gaussian
+    Wrong   : software=gaussian
 	
+	
+	
+	
+![](http://www.elcomercio.com/files/article_main/uploads/2017/05/12/5916775bc3359.jpeg)
