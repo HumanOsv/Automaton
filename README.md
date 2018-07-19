@@ -4,7 +4,7 @@ We introduce a structural search algorithm implemented in the new AUTOMATON prog
 
 # Getting Started
 
-1)	Prerequisites
+**1)	Prerequisites**
 
 AUTOMATON is written in Perl. The program has only been tested on Mac OS X, Linux and Windows, so it can’t be guaranteed to run on other operating systems.
 
@@ -26,7 +26,9 @@ This topic lists library and software that must be installed prior to installing
   
   NOTE: mpiexec for Lammps (https://www.mpich.org/static/docs/v3.1/www1/mpiexec.html)
 
-2)	Running AUTOMATON
+**2)	Running AUTOMATON**
+
+The program does not have a graphical user interface, it has a command line interface that is very simple to use with some instruction. AUTOMATON program interfaces with a computational program in the background, thus the program to be used has to be available. The program allows energy calculations to be performed using a wide variety of external quantum chemistry programs including Gaussian, Mopac and Lammps (ReaxFF).
 
 To download the AUTOMATON you need Git installed on your computer. If Git is installed use the following command to download the AUTOMATON: 
 
@@ -45,4 +47,57 @@ The following necessary files should appear in the working directory:
 Now use the following commands to execute this program:
 
     user$ setsid perl AUTOMATON.pl Config.in >out.log
+
+After a successful run of the program, several output files named as: 01Final_coords.xyz, 02Duplicate_coords.xyz, 03Report_Output.txt and 04Files_not_converge.txt (only Gaussian) will be generated in your working directory.
+
+**3)	Input File**
+
+The main input file named as input.dat, contains all necessary parameters for the structure
+prediction.
+
+Number of structures (3N or 5N, N = Atoms number)
+
+    numb_conf = 10
+
+Genetic operations Most genetic algorithms implement several genetic operators; mating
+and mutation operator.
+
+    mutations = YES
+    crossing_over = YES
+
+The size of the box (in Angstroms) length, width, and height. AUTOMATON build an automatic box.
+
+    box_size = 
+
+Different atomic (or chemical) species in the system.( example: H 02 Pb 03 Ca 04 )
+
+    chemical_formula = Co 13
+
+Software mopac and gaussian (mopac/gaussian/lammps)
+
+    software = gaussian
+
+*Configuring the program for chemistry packages*
+
+The number of processors to use in the run (the value may be used to create the input file) # and memory to be used in GB.
+
+    core_mem = 4,8
+
+The charge and multiplicity of the candidate.
+
+    charge_multi = 0,1
+
+keywords for gaussian, mopac, or lamps
+
+*Gaussian*
+
+    header = PBE1PBE/SDDAll scf=(maxcycle=512) opt=(cartesian,maxcycle=512)
+
+*Mopac*
+
+    header = AUX LARGE PM6
+
+*Lammps (ReaxFF file)*
+
+    header = reaxxFF.Co
 
