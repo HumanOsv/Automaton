@@ -10,7 +10,7 @@ crossing_over = YES
 box_size = 
 
 # Different atomic (or chemical) species in the system.( example: H 02 Pb 03 Ca 04 )
-chemical_formula = C 12
+chemical_formula = H 06 C 06
 
 # Software mopac and gaussian (mopac/gaussian/lammps)
 software = gaussian
