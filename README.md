@@ -50,6 +50,12 @@ Now use the following commands to execute this program:
 
 After a successful run of the program, several output files named as: 01Final_coords.xyz, 02Duplicate_coords.xyz, 03Report_Output.txt and 04Files_not_converge.txt (only Gaussian) will be generated in your working directory.
 
+	01Final_coords.xyz       : Final coordinates XYZ file format of each species ordered less energy at higher energy.
+	02Duplicate_coords.xyz   : Candidates that are a duplicate of a candidate in the population, in XYZ file format.
+	03Report_Output.txt      : Print summary information after each set of this many iterations.
+	04Files_not_converge.txt : Summary information of files that have problems SCF convergence (only Gaussian program).
+
+
 **3)	Input File**
 
 The main input file named as input.dat, contains all necessary parameters for the structure
