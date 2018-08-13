@@ -10,7 +10,7 @@ AUTOMATON is written in Perl. The program has only been tested on Mac OS X, Linu
 
 This topic lists library and software that must be installed prior to installing AUTOMATON.
 
--Install CPAN modules (http://www.cpan.org/modules/INSTALL.html:https://egoleo.wordpress.com/2008/05/19/how-to-install-perl-modules-through-cpan-on-ubuntu-hardy-server/)
+-Install CPAN modules (http://www.cpan.org/modules/INSTALL.html or https://egoleo.wordpress.com/2008/05/19/how-to-install-perl-modules-through-cpan-on-ubuntu-hardy-server/)
 
     user$ sudo cpan Parallel::ForkManager
       
