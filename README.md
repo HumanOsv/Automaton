@@ -6,9 +6,11 @@ We introduce a structural search algorithm implemented in the new **AUTOMATON** 
 
 **1)	Prerequisites**
 
-AUTOMATON is written in Perl. The program has only been tested on Mac OS X, Linux and Windows, so it can’t be guaranteed to run on other operating systems.
+AUTOMATON is written in Perl. The program has been tested on Linux, MACOS and Windows.
 
-This topic lists library and software that must be installed prior to installing AUTOMATON.
+Library and software that must be installed prior to installing AUTOMATON:
+
+-Install Perl environment.
 
 -Install CPAN modules (http://www.cpan.org/modules/INSTALL.html or https://egoleo.wordpress.com/2008/05/19/how-to-install-perl-modules-through-cpan-on-ubuntu-hardy-server/)
 
@@ -16,7 +18,7 @@ This topic lists library and software that must be installed prior to installing
       
     user$ sudo cpan Math::Matrix
 
--Install External softwares
+-Install external softwares
 
   •	Mopac (http://openmopac.net/Download_MOPAC_Executable_Step2.html)
 
@@ -58,36 +60,34 @@ After a successful run of the program, several output files named as: 01Final_co
 
 **3)	Input File**
 
-The main input file named as input.dat, contains all necessary parameters for the structure
-prediction.
+The main input file known as input.dat contains all the necessary parameters for a correct calculation. Each variable is explained below.
 
 Number of structures (3N or 5N, N = Atoms number)
 
     numb_conf = 60
 
-Genetic operations Most genetic algorithms implement several genetic operators; mating
-and mutation operator.
+Use of genetic operators; mating and mutation operator.
 
     mutations = YES
     crossing_over = YES
 
-The size of the box (in Angstroms) length, width, and height. AUTOMATON build an automatic box.
+The size of the box (Angstroms) with format "length, width, height". AUTOMATON builds an automatic cuadricular box using the sum of all covalents radii of the system.
 
     box_size = 
 
-Different atomic (or chemical) species in the system.( example: H 02 Pb 03 Ca 04 )
+Chemical formula for the system ( example: H 02 Pb 03 Ca 04 ).
 
     chemical_formula = H 06 C 06
     
 *NOTE: Respect the spaces of separation.*
 
-Software mopac and gaussian (mopac/gaussian/lammps)
+Software that will be used (mopac/gaussian/lammps).
 
     software = gaussian
 
 *Configuring the program for chemistry packages*
 
-The number of processors to use in the run (the value may be used to create the input file) # and memory to be used in GB.
+Procesor and memory (GB) that will be used for each calculation.
 
     core_mem = 8,8
 
@@ -113,7 +113,3 @@ General Note: Respect the spaces of separation between the symbol "=".
 
     Correct : software = gaussian
     Wrong   : software=gaussian
-	
-	
-
-
