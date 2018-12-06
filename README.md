@@ -4,21 +4,11 @@ We introduce a structural search algorithm implemented in the new **AUTOMATON** 
 
 # Getting Started
 
-**1)	Prerequisites**
+**1)	Step Zero**
 
-AUTOMATON is written in Perl. The program has been tested on Linux, MACOS and Windows.
+Before starting to install, copying or calculating stuff is important to know that AUTOMATON isn´t a full or autosuficienct software, it needs an installed calculation software like Gaussian, Mopac or Lammps. AUTOMATON use these pre-installed tools for the minima local search.
 
-Library and software that must be installed prior to installing AUTOMATON:
-
--Install Perl environment.
-
--Install CPAN modules (http://www.cpan.org/modules/INSTALL.html or https://egoleo.wordpress.com/2008/05/19/how-to-install-perl-modules-through-cpan-on-ubuntu-hardy-server/)
-
-    user$ sudo cpan Parallel::ForkManager
-      
-    user$ sudo cpan Math::Matrix
-
--Install external softwares
+**1. Install external softwares.**
 
   •	Mopac (http://openmopac.net/Download_MOPAC_Executable_Step2.html)
 
@@ -28,37 +18,71 @@ Library and software that must be installed prior to installing AUTOMATON:
   
   NOTE: mpiexec for Lammps (https://www.mpich.org/static/docs/v3.1/www1/mpiexec.html)
 
-**2)	Running AUTOMATON**
+**2. Install Perl environment.**
+
+Once the calculation tools are correctly installed and working, the Perl environment needs to be installed as well. Perl is highly capable, feature-rich programming language that runs on many plataforms from portable to mainframes.
+Can be installed from:
+- https://www.perl.org/get.html
+
+There is some libraries and software that must be installed as well fro AUTOMATON to works:
+
+-Install CPAN modules (http://www.cpan.org/modules/INSTALL.html or https://egoleo.wordpress.com/2008/05/19/how-to-install-perl-modules-through-cpan-on-ubuntu-hardy-server/)
+
+    user$ cpan Parallel::ForkManager
+      
+    user$ cpan Math::Matrix
+
+**2)	Downloading and Installing AUTOMATON**
 
 The program does not have a graphical user interface, it has a command line interface that is very simple to use with some instruction. AUTOMATON program interfaces with a computational program in the background, thus the program to be used has to be available. The program allows energy calculations to be performed using a wide variety of external quantum chemistry programs including Gaussian, Mopac and Lammps (ReaxFF).
 
-To download the AUTOMATON you need Git installed on your computer. If Git is installed use the following command to download the AUTOMATON: 
+The first step is always "Download the software", AUTOMATON can be directly downloaded as a zip file from the page:
+
+-https://github.com/HumanOsv/Automaton
+
+Alternatively can be downloaded using the Git tools using the following command:
 
     user$ git clone https://github.com/HumanOsv/Automaton.git
 
     user$ cd ./Automaton
 
-The following necessary files should appear in the working directory:
+**Note: before downloading using Git make sure to be in your final installation path.**
 
-    • Config.in              : The AUTOMATON input file
+We recommend to install using Git for easy futures updates to the AUTOMATON software. To update the progrma simply use
 
-    • AUTOMATON.pl           : The executable file for structure prediction
+	user$ git pull master
+	
+The next logical step is installing AUTOMATON, for thiss just choose a final installation path and extract/git the software there. Give all the minimal permission to use and, optionally set AUTOMATON.pl file as a system call. That's it, no further instruction needed.
 
-    • ReaxFF file (optional) : Reactive MD-force field file of Lammps
+**3)	Running AUTOMATON**
+
+The following necessary files needs to be in the working directory:
+
+    • Input.dat              : The AUTOMATON input file, see below for more information.
+
+    • AUTOMATON.pl           : The executable file for structure prediction. **
+
+    • ReaxFF file (optional) : Reactive MD-force field file of Lammps.
+
+**Note: AUTOMATON.pl can be call from another path if correctly set**
 
 Now use the following commands to execute this program:
 
-    user$ setsid perl AUTOMATON.pl Config.in >out.log
+    user$  AUTOMATON.pl Config.in > out.log
 
-After a successful run of the program, several output files named as: 01Final_coords.xyz, 02Duplicate_coords.xyz, 03Report_Output.txt and 04Files_not_converge.txt (only Gaussian) will be generated in your working directory.
+alternatively, the user can set AUTOMATON to run in the background using one of the following methods:
+
+	user$ nohup perl NICSall.pl Config.in > out.log
+	user$ setsid perl NICSall.pl Config.in > out.log
+
+After a successful run of the program, several output files will be generated in your working directory.
 
 	01Final_coords.xyz       : Final coordinates XYZ file format of each species ordered less energy at higher energy.
 	02Duplicate_coords.xyz   : Candidates that are a duplicate of a candidate in the population, in XYZ file format.
 	03Report_Output.txt      : Print summary information after each set of this many iterations.
 	04Files_not_converge.txt : Summary information of files that have problems SCF convergence (only Gaussian program).
 
-
-**3)	Input File**
+**4)	Input File**
 
 The main input file known as input.dat contains all the necessary parameters for a correct calculation. Each variable is explained below.
 
