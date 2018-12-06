@@ -75,13 +75,6 @@ alternatively, the user can set AUTOMATON to run in the background using one of 
 	user$ nohup perl NICSall.pl Config.in > out.log
 	user$ setsid perl NICSall.pl Config.in > out.log
 
-After a successful run of the program, several output files will be generated in your working directory.
-
-	01Final_coords.xyz       : Final coordinates XYZ file format of each species ordered less energy at higher energy.
-	02Duplicate_coords.xyz   : Candidates that are a duplicate of a candidate in the population, in XYZ file format.
-	03Report_Output.txt      : Print summary information after each set of this many iterations.
-	04Files_not_converge.txt : Summary information of files that have problems SCF convergence (only Gaussian program).
-
 **4)	Input File**
 
 The main input file known as input.dat contains all the necessary parameters for a correct calculation. Each variable is explained below.
@@ -95,16 +88,16 @@ Use of genetic operators; mating and mutation operator.
     mutations = YES
     crossing_over = YES
 
-The size of the box (Angstroms) with format "length, width, height". AUTOMATON builds an automatic cuadricular box using the sum of all covalents radii of the system.
-
-    box_size = 
-
 Chemical formula for the system ( example: H 02 Pb 03 Ca 04 ).
 
     chemical_formula = H 06 C 06
-    
-*NOTE: Respect the spaces of separation.*
 
+**NOTE: Respect the spaces of separation.**
+
+The size of the box (Angstroms) with format "length, width, height". AUTOMATON builds an automatic cuadricular box using the sum of all covalents radii of the system.
+
+    box_size = 
+    
 Software that will be used (mopac/gaussian/lammps).
 
     software = gaussian
@@ -137,3 +130,13 @@ General Note: Respect the spaces of separation between the symbol "=".
 
     Correct : software = gaussian
     Wrong   : software=gaussian
+
+**5) Outputs of AUTOMATON**
+
+After a successful run of the program, several output files will be generated in your working directory.
+
+	01Final_coords.xyz       : Final coordinates XYZ file format of each species ordered less energy at higher energy.
+	02Duplicate_coords.xyz   : Candidates that are a duplicate of a candidate in the population, in XYZ file format.
+	03Report_Output.txt      : Print summary information after each set of this many iterations.
+	04Files_not_converge.txt : Summary information of files that have problems SCF convergence (only Gaussian program).
+	out.log			 : Log file with all information.
