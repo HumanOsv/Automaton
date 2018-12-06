@@ -83,10 +83,12 @@ Number of structures (3N or 5N, N = Atoms number)
 
     numb_conf = 60
 
+
 Use of genetic operators; mating and mutation operator.
 
     mutations = YES
     crossing_over = YES
+
 
 Chemical formula for the system ( example: H 02 Pb 03 Ca 04 ).
 
@@ -94,39 +96,44 @@ Chemical formula for the system ( example: H 02 Pb 03 Ca 04 ).
 
 **NOTE: Respect the spaces of separation.**
 
+
 The size of the box (Angstroms) with format "length, width, height". AUTOMATON builds an automatic cuadricular box using the sum of all covalents radii of the system.
 
     box_size = 
     
+
 Software that will be used (mopac/gaussian/lammps).
 
     software = gaussian
 
 *Configuring the program for chemistry packages*
 
+
 Procesor and memory (GB) that will be used for each calculation.
 
     core_mem = 8,8
+
 
 The charge and multiplicity of the candidate.
 
     charge_multi = 0,1
 
-keywords for gaussian, mopac, or lammps
 
-*Gaussian*
+Keywords for gaussian, mopac, or lammps
+
+*1. Gaussian*
 
     header = PBE1PBE/SDDAll scf=(maxcycle=512) opt=(cartesian,maxcycle=512)
 
-*Mopac*
+*2. Mopac*
 
     header = AUX LARGE PM6
 
-*Lammps (ReaxFF file)*
+*3. Lammps (ReaxFF file)*
 
     header = reaxxFF.Co
 
-General Note: Respect the spaces of separation between the symbol "=".
+**General Note:** Respect the spaces of separation between the symbol "=".
 
     Correct : software = gaussian
     Wrong   : software=gaussian
