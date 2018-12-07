@@ -72,8 +72,8 @@ Now use the following commands to execute this program:
 
 alternatively, the user can set AUTOMATON to run in the background using one of the following methods:
 
-	user$ nohup perl NICSall.pl Config.in > out.log
-	user$ setsid perl NICSall.pl Config.in > out.log
+	user$ nohup AUTOMATON.pl Config.in > out.log
+	user$ setsid AUTOMATON.pl Config.in > out.log
 
 **4)	Input File**
 
