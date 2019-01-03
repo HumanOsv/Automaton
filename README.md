@@ -1,14 +1,14 @@
 # Automaton
 
-We introduce a structural search algorithm implemented in the new **AUTOMATON** program. The program consists of two main procedures: in the first one, a discrete population is generated combining rules of a simplified Celular Automaton model with geometrical optimizations (to the nearest stationary point) using an *ab initio* method. In the second one, this population is evolved through genetic operations followed by geometrical optimizations (to the nearest stationary point) using an *ab initio* method. Additionally, **AUTOMATON** includes a structure-recognition routine, which is used in different stages of the search process to identify and eliminate duplicates.
+AUTOMATON is a hybrid program that combines a probabilistic cellular automata and a genetic algorithm for the global minimum search of clusters and molecules. The main procedure consists of two major steps: first, a discrete population is generated combining rules of a simplified Cellular Automata model with geometrical optimizations (to the nearest stationary point) using an ab initio or DFT method; second, this population is primarily evolved through genetic operations, and then followed by geometrical optimizations, towards the nearest stationary point. Additionally, AUTOMATON includes a structure-recognition routine, which is used at different stages of the search process to identify and eliminate duplicate structures.
 
 # Getting Started
 
 **1)	Step Zero**
 
-Before starting to install, copying or calculating stuff is important to know that AUTOMATON isn´t a full or autosuficienct software, it needs an installed calculation software like Gaussian, Mopac or Lammps. AUTOMATON use these pre-installed tools for the minima local search.
+Before starting the installation, it is important to know that AUTOMATON is not a full or autonomous software; instead, it needs an assisting program to calculate energies and perform optimizations like Gaussian, Mopac or Lammps. AUTOMATON uses these pre-installed tools for the minima local search on the potential energy surface (PES).
 
-**1. Install external softwares.**
+**1. Installing external softwares.**
 
   •	Mopac (http://openmopac.net/Download_MOPAC_Executable_Step2.html)
 
@@ -18,13 +18,13 @@ Before starting to install, copying or calculating stuff is important to know th
   
   NOTE: mpiexec for Lammps (https://www.mpich.org/static/docs/v3.1/www1/mpiexec.html)
 
-**2. Install Perl environment.**
+**2. Installing Perl environment.**
 
-Once the calculation tools are correctly installed and working, the Perl environment needs to be installed as well. Perl is highly capable, feature-rich programming language that runs on many plataforms from portable to mainframes.
-Can be installed from:
+Once the programs for both energy calculations and geometry optimizations are working correctly, the Perl environment needs to be installed as well. Perl is a highly capable, feature-rich programming language that runs on many platforms from portable to mainframes.
+It can be installed from:
 - https://www.perl.org/get.html
 
-There is some libraries and software that must be installed as well fro AUTOMATON to works:
+There are some additional libraries and softwares that must also be installed to allow AUTOMATON to work:
 
 -Install CPAN modules (http://www.cpan.org/modules/INSTALL.html or https://egoleo.wordpress.com/2008/05/19/how-to-install-perl-modules-through-cpan-on-ubuntu-hardy-server/)
 
@@ -34,29 +34,27 @@ There is some libraries and software that must be installed as well fro AUTOMATO
 
 **2)	Downloading and Installing AUTOMATON**
 
-The program does not have a graphical user interface, it has a command line interface that is very simple to use with some instruction. AUTOMATON program interfaces with a computational program in the background, thus the program to be used has to be available. The program allows energy calculations to be performed using a wide variety of external quantum chemistry programs including Gaussian, Mopac and Lammps (ReaxFF).
-
-The first step is always "Download the software", AUTOMATON can be directly downloaded as a zip file from the page:
+AUTOMATON can be directly downloaded as a zip file from the page:
 
 -https://github.com/HumanOsv/Automaton
 
-Alternatively can be downloaded using the Git tools using the following command:
+Alternatively, it can be downloaded using the Git tools using the following command:
 
     user$ git clone https://github.com/HumanOsv/Automaton.git
 
     user$ cd ./Automaton
 
-**Note: before downloading using Git make sure to be in your final installation path.**
+**Note: before downloading using Git tools, make sure to be in your final installation path.**
 
-We recommend to install using Git for easy futures updates to the AUTOMATON software. To update the progrma simply use
+We recommend to install using Git tools to update future AUTOMATON software easily. To update the program, use the following command:
 
 	user$ git pull master
 	
-The next logical step is installing AUTOMATON, for thiss just choose a final installation path and extract/git the software there. Give all the minimal permission to use and, optionally set AUTOMATON.pl file as a system call. That's it, no further instruction needed.
+Alternatively, AUTOMATON could be installed as follows: choose a final installation path, and then extract the ZIP file (containing the software). Provide all the basic permissions for use and, optionally, set AUTOMATON.pl file as a system call.
 
 **3)	Running AUTOMATON**
 
-The following necessary files needs to be in the working directory:
+To run AUTOMATON the following files are necessary in the working directory:
 
     • Input.dat              : The AUTOMATON input file, see below for more information.
 
@@ -64,20 +62,20 @@ The following necessary files needs to be in the working directory:
 
     • ReaxFF file (optional) : Reactive MD-force field file of Lammps.
 
-**Note: AUTOMATON.pl can be call from another path if correctly set**
+**Note: AUTOMATON.pl can be called from another path if correctly set**
 
-Now use the following commands to execute this program:
+Now, use the following commands to execute this program:
 
     user$  AUTOMATON.pl Config.in > out.log
 
-alternatively, the user can set AUTOMATON to run in the background using one of the following methods:
+Alternatively, the user can set AUTOMATON to run in the background using one of the following methods:
 
 	user$ nohup AUTOMATON.pl Config.in > out.log
 	user$ setsid AUTOMATON.pl Config.in > out.log
 
 **4)	Input File**
 
-The main input file known as input.dat contains all the necessary parameters for a correct calculation. Each variable is explained below.
+The main input file, known as input.dat, contains all the necessary parameters for a correct calculation. Each variable is explained below.
 
 Number of structures (3N or 5N, N = Atoms number)
 
@@ -94,7 +92,7 @@ Chemical formula for the system ( example: H 02 Pb 03 Ca 04 ).
 
     chemical_formula = H 06 C 06
 
-**NOTE: Respect the spaces of separation.**
+**NOTE: Respect the spaces.**
 
 
 The size of the box (Angstroms) with format "length, width, height". AUTOMATON builds an automatic cuadricular box using the sum of all covalents radii of the system.
@@ -138,7 +136,7 @@ Keywords for gaussian, mopac, or lammps
     Correct : software = gaussian
     Wrong   : software=gaussian
 
-**5) Outputs of AUTOMATON**
+**5) AUTOMATON outputs**
 
 After a successful run of the program, several output files will be generated in your working directory.
 
