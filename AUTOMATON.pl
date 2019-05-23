@@ -2731,6 +2731,19 @@ foreach my $a_1 (@data){
 			#
 			$arrays_errors[8] = "software";			
 		}
+		if ( ($a_1=~/radius_sphere/gi ) ){
+			my @tmp = ();
+			@tmp    = split (/\s+/,$a_1);
+			# Identify empty string
+			if (!defined($tmp[2])) {
+				print "ERROR Radius of the Sphere empty\n";
+				exit;
+			} else {			
+				$sphereType = $tmp[2];
+			}
+			#
+			$arrays_errors[9] = "radius_sphere";			
+		}
 	}
 }
 # El numero de atomos debe ser mayor o igual a 3
@@ -2757,6 +2770,9 @@ if (!defined($arrays_errors[5]))  { $arrays_errors[5]  = "NO"; }
 if (!defined($arrays_errors[6]))  { $arrays_errors[6]  = "NO"; }
 if (!defined($arrays_errors[7]))  { $arrays_errors[7]  = "NO"; }
 if (!defined($arrays_errors[8]))  { $arrays_errors[8]  = "NO"; }
+#
+if (!defined($arrays_errors[9]))  { $arrays_errors[9]  = "NO"; }
+#
 my $bolean = errors_config (\@arrays_errors);
 if ( $bolean == 0) { exit; }
 # Inputs for Gaussian and Mopac
