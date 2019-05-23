@@ -1937,13 +1937,18 @@ sub fisher_yates_shuffle {
 ###################################
 # Construct Discrete Search Space Cube
 sub Construct_Discrete_Search_Space_Cube {
-	my ($length_side_box_x,$length_side_box_y,$length_side_box_z,$cell_size_w) = @_;
+	my ($length_side_box_x,$length_side_box_y,$length_side_box_z,$cell_size_w, $sphereType) = @_;
 	#
 	my $max_coord_x = $length_side_box_x;
 	my $max_coord_y = $length_side_box_y;
 	my $max_coord_z = $length_side_box_z;	
 	#
 	my $cell_center          = ( $cell_size_w / 2 ); 
+	#
+	# For spheres
+	my $middleX = $length_side_box_x/2;	
+	my $middleY = $length_side_box_y/2;
+	my $middleZ = $length_side_box_z/2;
 	#
 	my $total_number_of_cell_x = ( $max_coord_x / $cell_size_w );
 	my $total_number_of_cell_y = ( $max_coord_y / $cell_size_w );
@@ -1970,8 +1975,18 @@ sub Construct_Discrete_Search_Space_Cube {
 				my $coord_x = ( ( $x * $cell_size_w ) + $cell_center );
 				my $coord_y = ( ( $y * $cell_size_w ) + $cell_center );
 				my $coord_z = ( ( $z * $cell_size_w ) + $cell_center );
-				#
-				$string_coords.= "$coord_x\t$coord_y\t$coord_z\n";
+				# Si existe radio de esfera entra 
+				if($sphereType != -1){
+					my $distance_sphere = Euclidean_distance($coord_x, $coord_y, $coord_z, $middleX, $middleY, $middleZ);
+					if ( ($distance_sphere < $sphereType) || ($distance_sphere > ($sphereType + 2*$delta)) ) {
+						# Delete all cells inside the radio of the sphere
+					}else{
+						#print "X\t$coord_x\t$coord_y\t$coord_z\n";
+						$string_coords.= "$coord_x\t$coord_y\t$coord_z\n";	
+					}					
+				} else {
+					$string_coords.= "$coord_x\t$coord_y\t$coord_z\n";
+				}
 			}
 		}
 		$pm->finish(0,\$string_coords);
@@ -2827,9 +2842,15 @@ my @discretized_search_space_2D = ();
 my @discretized_search_space_3D = ();
 #
 if ( $type_Cellular_automaton == 1 ) {
-	@discretized_search_space_1D = @{Construct_Discrete_Search_Space_Cube ($Box_x,"2","2",$cell_size_w)};
-	@discretized_search_space_2D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,"2",$cell_size_w)};
-	@discretized_search_space_3D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,$Box_z,$cell_size_w)};
+	# Atomata Cubico
+	if( $sphereType == -1){
+		@discretized_search_space_1D = @{Construct_Discrete_Search_Space_Cube ($Box_x,"2","2",$cell_size_w)};
+		@discretized_search_space_2D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,"2",$cell_size_w)};
+		@discretized_search_space_3D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,$Box_z,$cell_size_w)};
+	} else {
+	# Automata Esferico
+		@discretized_search_space_3D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,$Box_z,$cell_size_w,$sphereType)};
+	}
 	print FILEREP "MESSAGE Construct discrete search space is done\n";
 }
 # Obtener el numero total de atomos para un formato XYZ
