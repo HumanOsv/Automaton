@@ -12,27 +12,6 @@ use Benchmark;
 use List::Util qw( min max );
 use Math::Trig;
 
-
-#BEGIN {
- #   eval {
-  #      require Data::Dumper; 
-  #  };
-  #  if ($@) {
-  #      die qq(ForkManager doesn't exist);
-  #  }
-#}
-
-#BEGIN {
- #   eval {
-  #      require Math::Matrix; Matrix->import( LIST );
-  #  };
-  #  if ($@) {
-  #      die qq(Matrix doesn't exist);
-  #  }
-#}
-
-#use Data::Dumper;
-
 #
 # install: sudo cpan Parallel::ForkManager
 use Parallel::ForkManager;
