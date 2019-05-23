@@ -74,9 +74,9 @@ my $criteria        = "1e-06";
 # specify the maximum numer of steps 
 my $steps           = "100";
 # For linux
-#my $path_bin_lammps = "mpiexec -np 16 lammps-daily";
+my $path_bin_lammps = "mpiexec -np 16 lammps-daily";
 # For Windows
-my $path_bin_lammps = "lmp_mpi.exe";
+#my $path_bin_lammps = "lmp_mpi.exe";
 
 # # # 
 # Path for software MOPAC
