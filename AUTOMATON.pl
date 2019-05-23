@@ -2967,10 +2967,7 @@ while ( $convergence_count < 1 ) {
 			my $alpha             = 3;
 			my $fitness_functions = exp (-($alpha*$prob));
 			#my $fitness_functions = 0.5*( 1 - tanh ((2*$prob) - 1));
-			#my $fitness_functions = 1 - (0.7*$prob);	
-			
-			print " $min_energy  $max_energy  = $fitness_functions\n";
-
+			#my $fitness_functions = 1 - (0.7*$prob);
 			push (@fitness_values,$fitness_functions);
 		}
 		my @fitness_ener_sort = ();
