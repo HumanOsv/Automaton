@@ -2867,6 +2867,9 @@ if ( $type_Cellular_automaton == 1 ) {
 		@discretized_search_space_3D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,$Box_z,$cell_size_w,$sphereType)};
 	} else {
 	# Automata Esferico
+		$option_1D = 0;
+		$option_2D = 0;
+		$option_3D = 0;
 		@discretized_search_space_3D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,$Box_z,$cell_size_w,$sphereType)};
 	}
 	print FILEREP "MESSAGE Construct discrete search space is done\n";
