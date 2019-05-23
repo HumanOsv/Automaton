@@ -2862,9 +2862,9 @@ my @discretized_search_space_3D = ();
 if ( $type_Cellular_automaton == 1 ) {
 	# Atomata Cubico
 	if( $sphereType == -1){
-		@discretized_search_space_1D = @{Construct_Discrete_Search_Space_Cube ($Box_x,"2","2",$cell_size_w)};
-		@discretized_search_space_2D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,"2",$cell_size_w)};
-		@discretized_search_space_3D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,$Box_z,$cell_size_w)};
+		@discretized_search_space_1D = @{Construct_Discrete_Search_Space_Cube ($Box_x,"2","2",$cell_size_w,$sphereType)};
+		@discretized_search_space_2D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,"2",$cell_size_w,$sphereType)};
+		@discretized_search_space_3D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,$Box_z,$cell_size_w,$sphereType)};
 	} else {
 	# Automata Esferico
 		@discretized_search_space_3D = @{Construct_Discrete_Search_Space_Cube ($Box_x,$Box_y,$Box_z,$cell_size_w,$sphereType)};
