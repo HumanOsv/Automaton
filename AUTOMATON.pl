@@ -2565,6 +2565,8 @@ my $Multiplicity;
 my $header;
 my $software;
 #
+my $sphereType=-1;
+#
 my $mutations;
 my $crossing_over;
 #
