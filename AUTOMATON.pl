@@ -1959,9 +1959,15 @@ sub Construct_Discrete_Search_Space_Cube {
 	my $pm = Parallel::ForkManager->new($nprocess);
 	$pm->run_on_finish(sub {
 						my ($pid, $exit_code, $ident, $exit_signal, $core_dump, $string_coords) = @_;
-							my @string_array = split ( /\n/, $$string_coords );
-							foreach (@string_array) {
-								push (@discretized_search_space,$_);
+							#
+							my @string_array = ();
+							#
+							if (!defined($$string_coords)) {
+							} else {
+								@string_array = split ( /\n/, $$string_coords );
+								foreach (@string_array) {
+									push (@discretized_search_space,$_);
+								}							
 							}
 						});	
 	#
