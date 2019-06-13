@@ -535,7 +535,7 @@ sub restart_species {
 	#
 	my @first_arr  = ();
 	foreach my $a_1 (@info_array){
-		# SCF Done:  E(RPBE1PBE) =  -56.7829127857     A.U. after   40 cycles
+		#
 		$a_1 =~ s/^\s+|\s+$//g;
 		$info_array[0] =~ s/^\s+|\s+$//g;
 		if ( $a_1 eq $info_array[0] ){
