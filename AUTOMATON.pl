@@ -1070,7 +1070,7 @@ sub submit_queue_g09 {
 					if ( $Info_count_files{$without_extension} > $max_numb_conver ) {
 						push (@report_structure,$Info_files_dir{$key});
 						delete $Info_files_dir{$key};
-						$deci = 1;
+						#$deci = 1;
 					}
 					#
 					if ( $deci == 0 ) {
@@ -1202,6 +1202,12 @@ sub submit_queue_g09 {
 					push (@file_opt   ,$without_extension);
 					push (@num_element,$atom_numb);			
 				}
+			} else {
+				my ($energy_scf,$atom_numb,$coords_opt) = coords_energy_file (\@Secuencias);
+				push (@energy_opt ,$energy_scf);
+				push (@coords_opt ,$coords_opt);
+				push (@file_opt   ,$without_extension);
+				push (@num_element,$atom_numb);
 			}
 		}
 	}
