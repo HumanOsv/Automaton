@@ -142,6 +142,4 @@ After a successful run of the program, several output files will be generated in
 
 	01Final_coords.xyz       : Final coordinates XYZ file format of each species ordered less energy at higher energy.
 	02Duplicate_coords.xyz   : Candidates that are a duplicate of a candidate in the population, in XYZ file format.
-	03Report_Output.txt      : Print summary information after each set of this many iterations.
-	04Files_not_converge.txt : Summary information of files that have problems SCF convergence (only Gaussian program).
-	out.log			 : Log file with all information.
+	Output.log               : Print summary information after each set of this many iterations.
