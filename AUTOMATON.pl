@@ -41,9 +41,9 @@ my $exec_bin_g09 = "Gaussian09.d01";
 # 1 = YES (type automata) and  0 = NO (type kick)
 my $type_Cellular_automaton = 1;
 # Fix Value 0.3
-my $cell_size_w = 0.4;
+my $cell_size_w = 0.3;
 # For connect (Delta mayor al Grid)
-my $delta       = 0.5;
+my $delta       = 0.4;
 # Type of Grid 1D, 2D and 3D
 my $option_1D = 1;
 my $option_2D = 1;
@@ -103,7 +103,7 @@ my @v = ();
 # Vector ortogonal 
 my @v_orth;
 # Indica separacion entre fragmento y plano.
-my $spacingInPlane = 0.8; 
+my $spacingInPlane = 0.6; 
 # Hash contador de atomos x tipo
 my %atom_counting = (default=>0);
 # tmp
@@ -2217,7 +2217,7 @@ sub Mutations_Automata {
 	my @coords_y      = ();
 	my @coords_z	  = ();
 	#
-	my $delta_kick = 0.6;
+	my $delta_kick = 0.4;
 	#
 	my $atoms_to_change = int($Num_of_atoms * $PCENTATOMMUTATED);
 	for (my $i = 0; $i < $Num_of_atoms; $i++) {
