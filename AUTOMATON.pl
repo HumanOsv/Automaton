@@ -31,7 +31,7 @@ my $gaussian_version = "g09";
 my $local_cluster   = 0;
 # # # 
 # Check cluster send jobs
-my ($file_name,$queue) = @ARGV;
+my ($file_name) = @ARGV;
 my $exec_bin_g09 = "Gaussian09.d01";
 # # #
 # Config Automaton
@@ -61,7 +61,7 @@ my $nprocess             = 70;
 
 # # #
 # For gaussian
-my $max_numb_conver  = 2;
+my $max_numb_conver  = 3;
 my $max_numb_NImag   = 3;
 
 # # # 
@@ -2505,14 +2505,6 @@ if (not defined $file_name) {
 	die "\nAUTOMATON must be run with:\n\nUsage:\n\t perl AUTOMATON.pl [configure-file]\n\n\n";
 	exit;  
 }
-#
-if (not defined $queue) {
-	print_logo ();
-	die " Queue\n\n\n";
-	exit;
-}
-
-
 #
 my @delete_rot;
 my @arrayOutputs = ();
