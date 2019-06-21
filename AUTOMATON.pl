@@ -61,7 +61,7 @@ my $nprocess             = 70;
 
 # # #
 # For gaussian
-my $max_numb_conver  = 2;
+my $max_numb_conver  = 3;
 my $max_numb_NImag   = 3;
 
 # # # 
