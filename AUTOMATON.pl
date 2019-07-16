@@ -27,7 +27,7 @@ my $numero_colas     = 3;
 my $gaussian_version = "g09";
 
 # Local = 0 y queue = 1
-my $local_cluster   = 1;
+my $local_cluster   = 0;
 # # # 
 # Check cluster send jobs
 my ($file_name,$queue) = @ARGV;
