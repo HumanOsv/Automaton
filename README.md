@@ -2,6 +2,10 @@
 
 AUTOMATON is a hybrid program that combines a probabilistic cellular automata and a genetic algorithm for the global minimum search of clusters and molecules. The main procedure consists of two major steps: first, a discrete population is generated combining rules of a simplified Cellular Automata model with geometrical optimizations (to the nearest stationary point) using an ab initio or DFT method; second, this population is primarily evolved through genetic operations, and then followed by geometrical optimizations, towards the nearest stationary point. Additionally, AUTOMATON includes a structure-recognition routine, which is used at different stages of the search process to identify and eliminate duplicate structures.
 
+Osvaldo Yañez, Rodrigo Báez-Grez, Diego Inostroza, Walter A. Rabanal-León, Ricardo Pino-Rios, Jorge Garza, and W. Tiznado
+Journal of Chemical Theory and Computation 2019 15 (2), 1463-1475. **DOI: 10.1021/acs.jctc.8b00772**
+https://pubs.acs.org/doi/abs/10.1021/acs.jctc.8b00772
+
 # Getting Started
 
 **1)	Step Zero**
