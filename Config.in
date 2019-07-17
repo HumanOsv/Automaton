@@ -3,7 +3,7 @@
 #                                                         #
 
 # Number of structures (3N or 5N, N = Atoms number)
-numb_conf = 20
+numb_conf = 50
 
 # Genetic operations Most genetic algorithms implement several genetic operators; mating
 # and mutation operator.
