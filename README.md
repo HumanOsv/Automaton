@@ -146,6 +146,11 @@ Keywords for gaussian, mopac, or lammps
 
 After a successful run of the program, several output files will be generated in your working directory.
 
-	01Final_coords.xyz       : Final coordinates XYZ file format of each species ordered less energy at higher energy.
-	02Duplicate_coords.xyz   : Candidates that are a duplicate of a candidate in the population, in XYZ file format.
-	Output.log               : Print summary information after each set of this many iterations.
+	01Final_coords.xyz         : Final coordinates XYZ file format of each species ordered less energy at higher energy.
+	02Duplicate_coords.xyz     : Candidates that are a duplicate of a candidate in the population, in XYZ file format.
+	Output.log                 : Print summary information after each set of this many iterations.
+	PostCoords-NumberCycle.xyz : Local optimization for each structure.
+	PreCoords-NumberCycle.xyz  : Non-optimized structures.
+	
+	
+	
