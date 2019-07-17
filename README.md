@@ -88,6 +88,12 @@ Use of genetic operators; mating and mutation operator.
     crossing_over = YES
 
 
+Maximun Cycles and Energy (kcal/mol) AUTOMATON
+
+    maximun_cycles = 30
+    maximun_energy = 100
+
+
 Chemical formula for the system ( example: H 02 Pb 03 Ca 04 ).
 
     chemical_formula = H 06 C 06
