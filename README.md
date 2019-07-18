@@ -92,6 +92,11 @@ Use of genetic operators; mating and mutation operator.
     crossing_over = YES
 
 
+Rules of Cellular Automata using Chemistry intelligence (Others Elements > Hydrogen > Alkali > Alkaline Earth > Halogens)
+
+    clever_automata = NO
+
+
 Maximun Cycles and Energy (kcal/mol) AUTOMATON
 
     maximun_cycles = 30
