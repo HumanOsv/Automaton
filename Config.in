@@ -3,7 +3,7 @@
 #                                                         #
 
 # Number of structures (3N or 5N, N = Atoms number)
-numb_conf = 20
+numb_conf = 50
 
 # Genetic operations Most genetic algorithms implement several genetic operators; mating
 # and mutation operator.
@@ -23,7 +23,7 @@ box_size =
 chemical_formula = C 10
 
 # Software mopac and gaussian (mopac/gaussian/lammps)
-software = mopac
+software = gaussian
 
 # Configuring the program for chemistry packages 
 # The number of processors to use in the run (the value may be used to create the input file) and memory to be used in GB.
@@ -34,10 +34,10 @@ charge_multi = 0,1
 
 # keywords for gaussian, mopac, or lammps
 ## Gaussian
-#header = PBE1PBE/SDDAll scf=(maxcycle=512) opt=(cartesian,maxcycle=512)
+header = PBE1PBE/SDDAll scf=(maxcycle=512) opt=(cartesian,maxcycle=512)
 
 ## Mopac
-header = AUX LARGE AM1
+#header = AUX LARGE AM1
 
 ## Lammps (ReaxFF file)
 #header = reaxxFF.Carbon
