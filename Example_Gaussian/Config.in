@@ -6,6 +6,13 @@ numb_conf = 60
 mutations = YES
 crossing_over = YES
 
+# Rules of Cellular Automata using Chemistry intelligence
+clever_automata = NO
+
+# Maximun Cycles and Energy (kcal/mol) AUTOMATON
+maximun_cycles = 30
+maximun_energy = 100
+
 # The size of the box (in Angstroms) length, width, and height. AUTOMATON build an automatic box.
 box_size = 
 
