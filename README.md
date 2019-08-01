@@ -1,4 +1,4 @@
-# Automaton
+# Automaton pico
 
 ![alt text](https://github.com/HumanOsv/Automaton/blob/master/Old-Version/DesignEvo.jpg)
 
