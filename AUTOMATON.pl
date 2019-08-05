@@ -3161,8 +3161,8 @@ while ( $convergence_count < 1 ) {
 			print FILEREP "MESSAGE Initial Species (1D, 2D and 3D)\n";			
 			if ( $type_Cellular_automaton == 1 ) {
 				# Generar poblacion Automata celular
-				my $Porc_1D =  int ( $Num_of_geometries_input * (20 / 100) );
-				my $Porc_2D =  int ( $Num_of_geometries_input * (20 / 100) );
+				my $Porc_1D =  int ( $Num_of_geometries_input * ( 0 / 100) );
+				my $Porc_2D =  int ( $Num_of_geometries_input * (40 / 100) );
 				my $Porc_3D =  int ( $Num_of_geometries_input * (60 / 100) );
 				#				
 				($filebase,$string_atoms_coords) = Opt_Cell_Automata ($Porc_1D,\@Atoms, \@discretized_search_space_1D,$Num_of_atoms,"Cell1D_$count_cycle", $operator_DeepAU);
