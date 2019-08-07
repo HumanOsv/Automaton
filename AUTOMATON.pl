@@ -3163,7 +3163,7 @@ while ( $convergence_count < 1 ) {
 				# Generar poblacion Automata celular
 				my $Pob_1D = int ( $Num_of_geometries_input * ( 0 / 100) );
 				my $Pob_2D = int ( $Num_of_geometries_input * (40 / 100) );
-				my $Pob_3D = int ( $Num_of_geometries_input * (50 / 100) );
+				my $Pob_3D = int ( $Num_of_geometries_input * (60 / 100) );
 				#
 				my $rest_3D = $Num_of_geometries_input - ($Pob_1D + $Pob_2D);
 				#
