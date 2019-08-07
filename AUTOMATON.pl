@@ -3161,16 +3161,24 @@ while ( $convergence_count < 1 ) {
 			print FILEREP "MESSAGE Initial Species (1D, 2D and 3D)\n";			
 			if ( $type_Cellular_automaton == 1 ) {
 				# Generar poblacion Automata celular
-				my $Porc_1D =  int ( $Num_of_geometries_input * ( 0 / 100) );
-				my $Porc_2D =  int ( $Num_of_geometries_input * (40 / 100) );
-				my $Porc_3D =  int ( $Num_of_geometries_input * (60 / 100) );
-				#				
+				my $Pob_1D = int ( $Num_of_geometries_input * ( 0 / 100) );
+				my $Pob_2D = int ( $Num_of_geometries_input * (40 / 100) );
+				my $Pob_3D = int ( $Num_of_geometries_input * (50 / 100) );
+				#
+				my $rest_3D = $Num_of_geometries_input - ($Pob_1D + $Pob_2D);
+				#
+				#
+				my $Porc_1D =  $Pob_1D  ;				
 				($filebase,$string_atoms_coords) = Opt_Cell_Automata ($Porc_1D,\@Atoms, \@discretized_search_space_1D,$Num_of_atoms,"Cell1D_$count_cycle", $operator_DeepAU);
-                print FILEREP "        Species 1D = $Porc_1D\n";
+                                print FILEREP "        Species 1D = $Porc_1D\n";
+                                #
+                                my $Porc_2D =  $Pob_2D  ;
 				($filebase_2d,$string_atoms_coords_2d) = Opt_Cell_Automata ($Porc_2D,\@Atoms,\@discretized_search_space_2D,$Num_of_atoms,"Cell2D_$count_cycle", $operator_DeepAU);
-                print FILEREP "        Species 2D = $Porc_2D\n";
+                                 print FILEREP "        Species 2D = $Porc_2D\n";
+                                #
+                                my $Porc_3D =  $rest_3D ;
 				($filebase_3d,$string_atoms_coords_3d) = Opt_Cell_Automata ($Porc_3D,\@Atoms, \@discretized_search_space_3D,$Num_of_atoms,"Cell3D_$count_cycle", $operator_DeepAU);
-                print FILEREP "        Species 3D = $Porc_3D\n";
+                                print FILEREP "        Species 3D = $Porc_3D\n";
 			} else {			
 				# Generar poblacion tipo kick
 				#($filebase,$string_atoms_coords) = pob_type_kick ($ma_x,$ma_y,$ma_z,\@Atoms,$Num_of_geometries_input,"Kick3D");
