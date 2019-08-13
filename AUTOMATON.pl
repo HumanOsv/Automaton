@@ -1068,11 +1068,11 @@ sub submit_queue_gaussian {
 			if( ( -e "$without_extension.out" ) || ( -e "$without_extension.log" ) ) {
 				my @Secuencias   = ();
 				if( -e "$without_extension.out" ) {
-					sleep(2);
+					sleep(3);
 					@Secuencias      = read_file ("$without_extension.out");
 				}
 				if( -e "$without_extension.log" ) {
-					sleep(2);
+					sleep(3);
 					@Secuencias      = read_file ("$without_extension.log");
 				}
 				#
@@ -1198,11 +1198,11 @@ sub submit_queue_gaussian {
 		if( ( -e "$without_extension.out" ) || ( -e "$without_extension.log" ) ) {
 			my @Secuencias   = ();
 			if( -e "$without_extension.out" ) {
-				sleep(2);
+				sleep(3);
 				@Secuencias      = read_file ("$without_extension.out");
 			}
 			if( -e "$without_extension.log" ) {
-				sleep(2);
+				sleep(3);
 				@Secuencias      = read_file ("$without_extension.log");
 			}
 			my $option       = verification_of_termination(\@Secuencias);
