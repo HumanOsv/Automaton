@@ -72,12 +72,12 @@ To run AUTOMATON the following files are necessary in the working directory:
 
 Now, use the following commands to execute this program:
 
-    user$  AUTOMATON.pl Config.in > out.log
+    user$  perl AUTOMATON.pl Config.in > out.log
 
 Alternatively, the user can set AUTOMATON to run in the background using one of the following methods:
 
-	user$ nohup AUTOMATON.pl Config.in > out.log
-	user$ setsid AUTOMATON.pl Config.in > out.log
+	user$ nohup perl AUTOMATON.pl Config.in > out.log
+	user$ setsid perl AUTOMATON.pl Config.in > out.log
 
 **4)	Input File**
 
