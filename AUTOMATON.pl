@@ -29,8 +29,8 @@ my $gaussian_version = "g09";
 # Local = 0 y queue = 1 only Gaussian 
 my $local_cluster   = 0;
 # Percentage of initial population 
-my $Percentage_1D = 20;
-my $Percentage_2D = 20;
+my $Percentage_1D = 10;
+my $Percentage_2D = 30;
 my $Percentage_3D = 60;
 
 # # # 
