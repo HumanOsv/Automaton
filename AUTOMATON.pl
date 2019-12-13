@@ -967,6 +967,7 @@ sub submit_Mopac_Lammps {
 			push (@tmp_arr,$loarr[$i][$j]);
 			push (@arrfile,$loarr[$i][$j]);
 		}
+		sleep(3);		
 		parallel_cpu_local (\@tmp_arr,"NOFILE",$i,0,$software_option);
 	}
 	my @delete_arr    = ();
@@ -984,7 +985,8 @@ sub submit_Mopac_Lammps {
 	}
 	my @filtered   = uniq(@delete_arr);
 	my $data_value = scalar (@loarr);
-    #
+    	#
+	sleep(3);    
 	parallel_cpu_local (\@filtered,"NOFILE",$data_value,0,$software_option);
 	foreach my $i (@filtered) {
 		push (@element_files,$i);
