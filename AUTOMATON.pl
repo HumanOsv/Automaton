@@ -3653,8 +3653,8 @@ while ( $convergence_count < 1 ) {
 		}
 	} elsif ( $option_software == 1) {
 		print FILEREP "MESSAGE Send MOPAC\n";
-		#submit_queue_mopac (\@arrayInputs,$path_bin_mopac);        
-        submit_Mopac_Lammps (\@arrayInputs,$path_bin_mopac, $option_software);
+		submit_queue_mopac (\@arrayInputs,$path_bin_mopac);        
+        #submit_Mopac_Lammps (\@arrayInputs,$path_bin_mopac, $option_software);
 		print FILEREP "MESSAGE End MOPAC\n";
 		my ($value_coords_sort,$file_opt,$value_energy_sort) = energy_mopac ($num_atoms_xyz,\@arrayInputs);
 		@opt_name      = @{$file_opt};
