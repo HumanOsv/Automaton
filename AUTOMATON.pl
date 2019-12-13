@@ -61,7 +61,7 @@ my $Maximun_Cycles_Automaton = 0;
 # Fix Value 0.3
 my $cell_size_w = 0.3;
 # For connect (Delta mayor al Grid)
-my $delta       = 0.5;
+my $delta       = 0.4;
 # Mutations type of Grid 1D, 2D and 3D
 my $option_1D = 0;
 my $option_2D = 1;
