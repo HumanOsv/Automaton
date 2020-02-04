@@ -8,6 +8,8 @@ AUTOMATON is a hybrid program that combines a probabilistic cellular automata an
 Journal of Chemical Theory and Computation 2019 15 (2), 1463-1475. **DOI: 10.1021/acs.jctc.8b00772**
 https://pubs.acs.org/doi/abs/10.1021/acs.jctc.8b00772
 
+    Last update: February, 04-2020
+
 # Getting Started
 
 **1)	Step Zero**
