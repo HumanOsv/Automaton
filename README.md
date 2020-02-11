@@ -8,7 +8,12 @@ AUTOMATON is a hybrid program that combines a probabilistic cellular automata an
 Journal of Chemical Theory and Computation 2019 15 (2), 1463-1475. **DOI: 10.1021/acs.jctc.8b00772**
 https://pubs.acs.org/doi/abs/10.1021/acs.jctc.8b00772
 
-    Last update: February, 04-2020
+• Osvaldo Yañez, Diego Inostroza, Brandon Usuga‑Acevedo, Alejandro Vásquez‑Espinal, Ricardo Pino‑Rios,  Mauricio Tabilo‑Sepulveda, Jorge Garza, Jorge Barroso, Gabriel Merino, William Tiznado
+Theoretical Chemistry Accounts 2020 139 (41), 1-8. **DOI: 10.1007/s00214-020-2548-5** 
+https://link.springer.com/article/10.1007/s00214-020-2548-5
+
+
+    Last update: February, 11-2020
 
 # Getting Started
 
